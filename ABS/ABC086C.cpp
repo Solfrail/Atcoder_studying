@@ -14,25 +14,14 @@ using ll = long long;
 int main()
 {
   int N;
+  cin >> N;
   int t[N], x[N], y[N];
   int a, b, c;
-  cin >> N;
-  cout << N << endl;
 
   
   for(int i=0; i<N; ++i){
-    cin >> a >> b >> c;
-    t[i] = a;
-    x[i] = b;
-    y[i] = c;
-    cout << t[i] << " " << x[i] << " " << y[i] << " " << endl;
-  }
+    cin >> t[i] >> x[i] >> y[i];
 
-  for(int i=0; i<N; ++i){
-    cout << t[i] << endl;
-  }
-
-  for(int i=0;i<N;++i){
     //条件1
     if(t[i] % 2 == 1 && (x[i]+y[i]) % 2 == 0){
       cout << "No" << endl;
@@ -45,20 +34,21 @@ int main()
   }
 
   //条件2
-  /*if(N==1){
+  if(N==1){
     if(t[0] < x[0] + y[0]){
       cout << "No" << endl;
       return 0;      
     }
-  }*/
-  //else{
+  }
+  else{
     for(ll i=0; i<N-1; ++i){
+
       if(t[i+1]-t[i] < abs(x[i+1]-x[i])+abs(y[i+1]-y[i])){
         cout << "No" << endl;
         return 0;      
       }
     }
-  //}
+  }
 
   cout << "Yes" << endl;
 
