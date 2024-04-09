@@ -4,8 +4,8 @@ using ll = long long;
 
 int main()
 {
-    ll N; // 10
-    ll Y; //70000 = 
+    ll N;
+    ll Y; 
     ll sum;
     cin >> N >> Y; //N枚 Y円　の入力
 
